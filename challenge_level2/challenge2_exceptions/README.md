@@ -20,7 +20,7 @@ The solution for creating a config file specific to this challenge is the follow
 
 ### Solution
 
-#### Desciption
+#### Description
 
 The config file has been used from the previous challenge with the following changes init.
 

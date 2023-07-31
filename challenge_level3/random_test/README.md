@@ -6,7 +6,7 @@ Generate a random assembly test to expose the bugs in the given design.
 
 ## Solution
 
-A number of different random tests have been generated and run on the `riscv_buggy` to expose the bug by changing the configuations in `rv32i.yaml`. By running, many different regressions with `rv32i.cntrl`, `rv32i.compute`, `rv32i.data` and `sys.csr` instructions, the bug seems to in `rv32i.compute` set of instructions.
+A number of different random tests have been generated and run on the `riscv_buggy` to expose the bug by changing the configurations in `rv32i.yaml`. By running, many different regressions with `rv32i.cntrl`, `rv32i.compute`, `rv32i.data` and `sys.csr` instructions, the bug seems to in `rv32i.compute` set of instructions.
 
 The changes in `rv32i.yaml` have been shown in the images below:
 

@@ -49,14 +49,14 @@ In order to increase the timeout of the riscv-dv generator, the following flag `
 
 ### Issue2 (CRITICAL error)
 
-This error hindered the generation of the random test and an issue is already opened on riscv-dv repository [issue-928](https://github.com/chipsalliance/riscv-dv/issues/928) which means a test including conditonal and unconditional jumps instructions (and might be some other as well) is not possible with this generator as of now.
+This error hindered the generation of the random test and an issue is already opened on riscv-dv repository [issue-928](https://github.com/chipsalliance/riscv-dv/issues/928) which means a test including conditional and unconditional jumps instructions (and might be some other as well) is not possible with this generator as of now.
 
 ![error 3](/images/image%20(6).png)
 
 
 ### Workaround
 
-In order to extract the coverage, only the spike log was needed. Therefore, **AAPG** has been used as a subsitute of **riscv-dv generator** to generate the random test. The reason for choosing **AAPG** lies in the follwing facts:
+In order to extract the coverage, only the spike log was needed. Therefore, **AAPG** has been used as a substitute of **riscv-dv generator** to generate the random test. The reason for choosing **AAPG** lies in the following facts:
 
 1. **AAPG** is very very fast as compared with the **riscv-dv generator**.
 2. Using **AAPG**, any conditional and unconditional instructions can be easily generated.
@@ -81,7 +81,7 @@ When the above mentioned `cov` was run, the following error was observed in `sim
 
 The error in the image above showed that the coverage file was expecting the `immediate` value to be an register.
 
-The same behavior was happending with `lw` instruction.
+The same behavior was happening with `lw` instruction.
 
 #### Solution
 

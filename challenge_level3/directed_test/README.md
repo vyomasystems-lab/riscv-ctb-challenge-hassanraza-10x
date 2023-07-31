@@ -18,7 +18,7 @@ Mismatch in spike and RTL log can be seen in the following image.
 
 ![mismatch](/images/challenge3_directed_mismatch.png)
 
-On spike, the `or` operation has generated `0x0dfbffbf`, which is the correct result. While, on the given desgin `0x0df25d05` has been generated which is not correct.
+On spike, the `or` operation has generated `0x0dfbffbf`, which is the correct result. While, on the given design `0x0df25d05` has been generated which is not correct.
 
 
 ```
@@ -28,4 +28,4 @@ On spike, the `or` operation has generated `0x0dfbffbf`, which is the correct re
 ```
 
 ### Observation
-On observing keenly, it can been seen that `riscv_buggy` is generating the result of `or` operation as if it was an `xor` operation. As, the expected result of the `xor` operation is indeed `0x0df25d05` and `riscv_buggy` has generted the same result for `or`. It could be an issue either in `ALU` or `Decode` stage.
+On observing keenly, it can been seen that `riscv_buggy` is generating the result of `or` operation as if it was an `xor` operation. As, the expected result of the `xor` operation is indeed `0x0df25d05` and `riscv_buggy` has generated the same result for `or`. It could be an issue either in `ALU` or `Decode` stage.

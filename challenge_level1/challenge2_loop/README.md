@@ -8,7 +8,7 @@ The test was performing addition operations and self-checking for 3 sets of test
 
 ## Cause
 
-After the successful checking of 3 sets of test cases the test should have jumped at `test_end` but it kept on performing addition operations by loading data from the subsequent memory locations (**sebsequent memory locations contained zeros**) and stuck in the self checking loop causing it to never exit from spike.
+After the successful checking of 3 sets of test cases the test should have jumped at `test_end` but it kept on performing addition operations by loading data from the subsequent memory locations (**subsequent memory locations contained zeros**) and stuck in the self checking loop causing it to never exit from spike.
 
 ## Solution
 
