@@ -14,6 +14,8 @@ First of all, `Makefile` needed to be updated due to the following reasons
 
 `-march=rv32g` has been replaced with `-march=rv32i` in `Makefile`.
 
+![makefile](/images/exception_makefile.png)
+
 The solution for creating a config file specific to this challenge is the following.
 
 ### Solution
@@ -22,11 +24,17 @@ The solution for creating a config file specific to this challenge is the follow
 
 The config file has been used from the previous challenge with the following changes init.
 
-- As according to riscv-privileged-spec, `exception number 2` corresponds to  `illegal instruction`. Therefore, the `exception-generation` section has been updated with `ecause02: 10` in the config file.
-
 - In the `general` section of the config file, custom_trap_handler has been selected by setting `custom_trap_handler: true` as the exceptions will be handled in the `machine mode` and not delegated to lower privilege modes.
 
+`general:`
+
+![true](/images/exception_custom_trap_handler.png)
+
+- As according to riscv-privileged-spec, `exception number 2` corresponds to  `illegal instruction`. Therefore, the `exception-generation` section has been updated with `ecause02: 10` in the config file.
+
 - In the `program-macro`, ecuase02 is set to random `ecause02: "random"` which means the 10 illegal instructions (in our case) will be randomly picked.
+
+![random_exception](/images/exception_yaml_random.png)
 
 #### Issue
 
@@ -68,4 +76,8 @@ One of the two given workarounds can solve this problem.
 
 ## Conclusion
 
-The solution with workaround1 has been committed for this challenge in order to highlight the underlying issue.  
+The solution with workaround1 has been committed for this challenge in order to highlight the underlying issue.
+
+The snapshot of the output.
+
+![solution](/images/exception_solution_pic.png)
