@@ -4,6 +4,8 @@
 
 When the test executes an illegal instruction. It gets stuck and never exits spike.
 
+![error](/images/illegal_error.png)
+
 ## Cause
 
 On executing the illegal instruction, the test jumps to `trap_vector` and here it checks whether the exception was due to an environment call or not. As, in our case the cause was not an evnironment call, so the test jumps to `mtvec_handler`.
@@ -20,3 +22,5 @@ After this instruction which reads the value of `mepc` register in `mtvec_handle
 I have added these two instructions to increment the address in mepc by `8`.
 - `addi t0, t0, 8`
 - `csrw mepc, t0`
+
+![solution](/images/fix_illegal.png)

@@ -9,6 +9,8 @@ On running the `make` command, the assembler printed the following error message
 
 The above messages indicated that there were illegal operands on the mentioned lines in *test.S*
 
+![error](/images/error_logical_.png)
+
 ## Cause
 
 1. The problem with the first instruction was that it was using `z4` as a source register but there is no register with name `z4` in RISC-V.
@@ -25,3 +27,7 @@ The corrected instructions are
 
 1. `and s7, ra, t1`
 2. `and s5, t1, s0`
+
+The image of the fix.
+
+![solution](/images/logical_sol.png)
